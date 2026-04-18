@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+
+  /* Clean Minimalism Palette */
+  --color-clean-bg: #F9FAFB;
+  --color-clean-surface: #FFFFFF;
+  --color-clean-primary: #4F46E5;
+  --color-clean-primary-light: #EEF2FF;
+  --color-clean-text: #111827;
+  --color-clean-text-muted: #6B7280;
+  --color-clean-text-light: #9CA3AF;
+  --color-clean-border: #E5E7EB;
+  --color-clean-input-bg: #F3F4F6;
+
+  /* Aliases */
+  --color-rider-bg: var(--color-clean-bg);
+  --color-rider-surface: var(--color-clean-surface);
+  --color-rider-accent: var(--color-clean-primary);
+  --color-rider-text: var(--color-clean-text);
+}
+
+:root {
+  background-color: var(--color-clean-bg);
+  color: var(--color-clean-text);
+  overflow: hidden;
+  /* Support for safe areas on mobile devices */
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-left: env(safe-area-inset-left, 0px);
+  --safe-area-right: env(safe-area-inset-right, 0px);
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Prevent scrolling/bouncing on mobile browsers */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Touch-friendly buttons */
+button {
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+}
+

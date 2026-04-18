@@ -1,0 +1,6 @@
+{
+  "name": "Rider Display - Contact & Order Info",
+  "description": "A high-visibility display app for delivery riders to show phone numbers and order IDs to customers from a distance. Includes text-to-speech and card management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
